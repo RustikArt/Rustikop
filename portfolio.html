@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rustikop - Portfolio</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <script>
         // Fonction pour filtrer les projets
         function filterProjects(category) {
@@ -32,20 +33,28 @@
     </script>
 </head>
 <body class="bg-gray-50">
-    <nav class="bg-black text-white p-4 fixed w-full top-0 z-50">
-        <div class="container mx-auto flex justify-between items-center">
-            <a href="index.html" class="block">
-                <div class="text-2xl font-bold">Rustikop</div>
-            </a>
-            <div class="hidden md:flex space-x-6">
-                <a href="index.html" class="hover:text-yellow-400">Accueil</a>
-                <a href="portfolio.html" class="hover:text-yellow-400">Portfolio</a>
-                <a href="projets.html" class="hover:text-yellow-400">Nos Projets</a>
-                <a href="contact.html" class="hover:text-yellow-400">Contact</a>
-                <a href="magasin.html" class="hover:text-yellow-400">Magasin</a>                
-            </div>
+<!-- Navigation -->
+<nav class="bg-black text-white p-4 fixed w-full top-0 z-50">
+    <div class="container mx-auto flex justify-between items-center">
+        <div class="text-2xl font-bold">Rustikop</div>
+        <div class="hidden md:flex space-x-6">
+            <a href="index.html" class="hover:text-yellow-400">Accueil</a>
+            <a href="portfolio.html" class="hover:text-yellow-400">Portfolio</a>
+            <a href="projets.html" class="hover:text-yellow-400">Nos Projets</a>
+            <a href="contact.html" class="hover:text-yellow-400">Contact</a>
+            <a href="magasin.html" class="hover:text-yellow-400">Magasin</a>                
         </div>
-    </nav>
+        <div class="flex items-center space-x-4">
+            <button class="hover:text-yellow-400">
+                <i class="fas fa-search text-xl"></i>
+            </button>
+            <button class="hover:text-yellow-400 relative">
+                <i class="fas fa-shopping-cart text-xl"></i>
+                <span class="absolute -top-2 -right-2 bg-yellow-400 text-black w-5 h-5 rounded-full text-xs flex items-center justify-center">0</span>
+            </button>
+        </div>
+    </div>
+</nav>
 
     <header class="pt-24 pb-12 px-4">
         <div class="container mx-auto text-center">
@@ -67,46 +76,87 @@
         </div>
     </section>
 
-    <section class="py-8 px-4">
-        <div class="container mx-auto">
-            <div class="project-section Graphisme mb-16">
-                <h2 class="text-2xl font-bold mb-8 px-4">Graphisme</h2>
-                <div class="overflow-x-auto relative">
-                    <div class="flex space-x-8 pb-4">
-                        <div class="space-x-6 flex items-center bg-white p-3 rounded-lg shadow-lg cursor-pointer hover:shadow-xl transition">
-                            <img src="https://cdn-icons-png.flaticon.com/128/2021/2021763.png" alt="Projet Logo" width="60" height="60">
-                            <div class="p-6">
-                                <h3 class="font-bold text-xl mb-2">Logo, bannières, ...</h3>
-                                <p class="text-gray-600 mb-4">Création d'identité visuelle pour une startup</p>
-                                <button class="text-purple-600 font-bold hover:text-purple-700">Voir plus →</button>
-                            </div>
-                        </div>
-                        <div class="space-x-6 flex items-center bg-white p-3 rounded-lg shadow-lg cursor-pointer hover:shadow-xl transition">
-                            <img src="https://cdn-icons-png.flaticon.com/128/4133/4133179.png" alt="Projet Affiche" width="60" height="60">
-                            <div class="p-6">
-                                <h3 class="font-bold text-xl mb-2">Affiche Événement</h3>
-                                <p class="text-gray-600 mb-4">Design d'affiche pour festival de musique</p>
-                                <button class="text-purple-600 font-bold hover:text-purple-700">Voir plus →</button>
-                            </div>
-                        </div>
-                        <div class="space-x-6 flex items-center bg-white p-3 rounded-lg shadow-lg cursor-pointer hover:shadow-xl transition">
-                            <img src="https://cdn-icons-png.flaticon.com/128/4152/4152699.png" alt="Projet Branding" width="60" height="60">
-                            <div class="p-6">
-                                <h3 class="font-bold text-xl mb-2">Branding Complet</h3>
-                                <p class="text-gray-600 mb-4">Identité visuelle pour restaurant</p>
-                                <button class="text-purple-600 font-bold hover:text-purple-700">Voir plus →</button>
-                            </div>
+<!-- Section Graphisme -->
+<section class="py-8 px-4">
+    <div class="container mx-auto">
+        <div class="project-section Graphisme mb-16">
+            <h2 class="text-2xl font-bold mb-8 px-4">Graphisme</h2>
+            <!-- Conteneur avec défilement horizontal -->
+            <div class="overflow-x-auto">
+                <div class="flex space-x-6 pb-4">
+                    <!-- Carte 1 -->
+                    <div class="bg-white p-3 rounded-lg shadow-lg cursor-pointer hover:shadow-xl transition w-64 flex-shrink-0">
+                        <img src="https://cdn-icons-png.flaticon.com/128/2021/2021763.png" alt="Projet Logo" width="60" height="60">
+                        <div class="p-4">
+                            <h3 class="font-bold text-xl mb-2">Logo, bannières, ...</h3>
+                            <p class="text-gray-600 mb-4 w-56 break-words">
+                                Création d'identité visuelle pour une startup
+                            </p>
+                            <button class="text-purple-600 font-bold hover:text-purple-700">Voir plus →</button>
                         </div>
                     </div>
-                    <!-- Barre de défilement -->
-                    <div class="absolute bottom-0 left-0 right-0 h-2 bg-gray-200">
-                        <div class="w-full h-full bg-purple-600 rounded"></div>
+                    <!-- Carte 2 -->
+                    <div class="bg-white p-3 rounded-lg shadow-lg cursor-pointer hover:shadow-xl transition w-64 flex-shrink-0">
+                        <img src="https://cdn-icons-png.flaticon.com/128/4133/4133179.png" alt="Projet Affiche" width="60" height="60">
+                        <div class="p-4">
+                            <h3 class="font-bold text-xl mb-2">Affiche Événement</h3>
+                            <p class="text-gray-600 mb-4 w-56 break-words">
+                                Design d'affiche pour festival de musique
+                            </p>
+                            <button class="text-purple-600 font-bold hover:text-purple-700">Voir plus →</button>
+                        </div>
+                    </div>
+                    <!-- Carte 3 -->
+                    <div class="bg-white p-3 rounded-lg shadow-lg cursor-pointer hover:shadow-xl transition w-64 flex-shrink-0">
+                        <img src="https://cdn-icons-png.flaticon.com/128/4152/4152699.png" alt="Projet Branding" width="60" height="60">
+                        <div class="p-4">
+                            <h3 class="font-bold text-xl mb-2">Branding Complet</h3>
+                            <p class="text-gray-600 mb-4 w-56 break-words">
+                                Identité visuelle pour restaurant
+                            </p>
+                            <button class="text-purple-600 font-bold hover:text-purple-700">Voir plus →</button>
+                        </div>
+                    </div>
+                    <!-- Carte 4 -->
+                    <div class="bg-white p-3 rounded-lg shadow-lg cursor-pointer hover:shadow-xl transition w-64 flex-shrink-0">
+                        <img src="https://cdn-icons-png.flaticon.com/128/2907/2907801.png" alt="Projet Packaging" width="60" height="60">
+                        <div class="p-4">
+                            <h3 class="font-bold text-xl mb-2">Design Packaging</h3>
+                            <p class="text-gray-600 mb-4 w-56 break-words">
+                                Création de packaging pour un produit bio
+                            </p>
+                            <button class="text-purple-600 font-bold hover:text-purple-700">Voir plus →</button>
+                        </div>
+                    </div>
+                    <!-- Carte 5 -->
+                    <div class="bg-white p-3 rounded-lg shadow-lg cursor-pointer hover:shadow-xl transition w-64 flex-shrink-0">
+                        <img src="https://cdn-icons-png.flaticon.com/128/2503/2503529.png" alt="Projet UI/UX" width="60" height="60">
+                        <div class="p-4">
+                            <h3 class="font-bold text-xl mb-2">UI/UX Design</h3>
+                            <p class="text-gray-600 mb-4 w-56 break-words">
+                                Conception d'interfaces modernes
+                            </p>
+                            <button class="text-purple-600 font-bold hover:text-purple-700">Voir plus →</button>
+                        </div>
+                    </div>
+                    <!-- Carte 6 -->
+                    <div class="bg-white p-3 rounded-lg shadow-lg cursor-pointer hover:shadow-xl transition w-64 flex-shrink-0">
+                        <img src="https://cdn-icons-png.flaticon.com/128/2772/2772565.png" alt="Projet Animation" width="60" height="60">
+                        <div class="p-4">
+                            <h3 class="font-bold text-xl mb-2">Animation 2D/3D</h3>
+                            <p class="text-gray-600 mb-4 w-56 break-words">
+                                Création d'animations pour publicité
+                            </p>
+                            <button class="text-purple-600 font-bold hover:text-purple-700">Voir plus →</button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>    
+    </div>
+</section>
 
+    
 <!-- Section Musique -->
  <section class="py-8 px-4">
     <div class="project-section Musique mb-16">
@@ -152,25 +202,6 @@
 
 
 <script>
-// Fonction de défilement horizontal
-const graphismeCarousel = document.getElementById('graphismeCarousel');
-const audioCarousel = document.getElementById('audioCarousel');
-
-// Ajout de la fonctionnalité de défilement horizontal pour Graphisme
-graphismeCarousel.addEventListener('wheel', (e) => {
-    if (e.deltaY > 0) {
-        graphismeCarousel.scrollBy({
-            left: 200,
-            behavior: 'smooth',
-        });
-    } else {
-        graphismeCarousel.scrollBy({
-            left: -200,
-            behavior: 'smooth',
-        });
-    }
-});
-
 // Ajout de la fonctionnalité de défilement horizontal pour Musique
 audioCarousel.addEventListener('wheel', (e) => {
     if (e.deltaY > 0) {
