@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rustikop - Magasin</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-black text-white p-4 fixed w-full top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="text-2xl font-bold">Rustikop</div>
+            <div class="hidden md:flex space-x-6">
+                <a href="index.html" class="hover:text-yellow-400">Accueil</a>
+                <a href="portfolio.html" class="hover:text-yellow-400">Portfolio</a>
+                <a href="projets.html" class="hover:text-yellow-400">Nos Projets</a>
+                <a href="contact.html" class="hover:text-yellow-400">Contact</a>
+                <a href="magasin.html" class="hover:text-yellow-400">Magasin</a>                
+            </div>
+            <div class="flex items-center space-x-4">
+                <button class="hover:text-yellow-400">
+                    <i class="fas fa-search text-xl"></i>
+                </button>
+                <button class="hover:text-yellow-400 relative">
+                    <i class="fas fa-shopping-cart text-xl"></i>
+                    <span class="absolute -top-2 -right-2 bg-yellow-400 text-black w-5 h-5 rounded-full text-xs flex items-center justify-center">0</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- En-tête -->
+    <header class="pt-24 pb-12 px-4 bg-gradient-to-r from-purple-900 to-indigo-900 text-white">
+        <div class="container mx-auto text-center">
+            <h1 class="text-4xl font-bold mb-4">Boutique Rustikop</h1>
+            <p class="text-xl mb-8">Découvrez nos services créatifs et produits artistiques</p>
+            <div class="flex justify-center gap-4">
+                <button class="bg-white text-purple-900 px-6 py-2 rounded-full hover:bg-gray-100">Services Graphiques</button>
+                <button class="bg-purple-600 text-white px-6 py-2 rounded-full hover:bg-purple-700">Produits Dérivés</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Filtres et Tri -->
+    <section class="py-8 px-4 bg-white border-b">
+        <div class="container mx-auto flex flex-wrap justify-between items-center">
+            <div class="flex space-x-4">
+                <select class="px-4 py-2 border rounded-lg">
+                    <option>Toutes les catégories</option>
+                    <option>Logos</option>
+                    <option>Bannières</option>
+                    <option>Illustrations</option>
+                    <option>Merchandising</option>
+                </select>
+                <select class="px-4 py-2 border rounded-lg">
+                    <option>Trier par</option>
+                    <option>Prix croissant</option>
+                    <option>Prix décroissant</option>
+                    <option>Popularité</option>
+                </select>
+            </div>
+            <div class="flex items-center">
+                <span class="text-gray-600 mr-4">Vue :</span>
+                <button class="p-2 hover:text-purple-600"><i class="fas fa-th"></i></button>
+                <button class="p-2 hover:text-purple-600"><i class="fas fa-list"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contenu Principal -->
+    <main class="py-16 px-4">
+        <div class="container mx-auto">
+            <!-- Services Graphiques -->
+            <section class="mb-16">
+                <h2 class="text-3xl font-bold mb-8">Services Graphiques</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Logo Design -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                        <img src="/api/placeholder/400/300" alt="Logo Design" class="w-full">
+                        <div class="p-6">
+                            <div class="flex justify-between items-start mb-4">
+                                <div>
+                                    <h3 class="font-bold text-xl mb-2">Design de Logo</h3>
+                                    <p class="text-gray-600">Logo professionnel et unique</p>
+                                </div>
+                                <span class="text-xl font-bold text-purple-600">299€</span>
+                            </div>
+                            <div class="space-y-4 mb-6">
+                                <div class="flex items-center">
+                                    <i class="fas fa-check text-green-500 mr-2"></i>
+                                    <span>3 propositions</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-check text-green-500 mr-2"></i>
+                                    <span>Modifications illimitées</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-check text-green-500 mr-2"></i>
+                                    <span>Fichiers sources inclus</span>
+                                </div>
+                            </div>
+                            <button class="w-full bg-purple-600 text-white py-2 rounded-lg hover:bg-purple-700">
+                                Ajouter au panier
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Bannière -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                        <img src="/api/placeholder/400/300" alt="Bannière Design" class="w-full">
+                        <div class="p-6">
+                            <div class="flex justify-between items-start mb-4">
+                                <div>
+                                    <h3 class="font-bold text-xl mb-2">Bannière Personnalisée</h3>
+                                    <p class="text-gray-600">Pour réseaux sociaux</p>
+                                </div>
+                                <span class="text-xl font-bold text-purple-600">149€</span>
+                            </div>
+                            <div class="space-y-4 mb-6">
+                                <div class="flex items-center">
+                                    <i class="fas fa-check text-green-500 mr-2"></i>
+                                    <span>Formats multiples</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-check text-green-500 mr-2"></i>
+                                    <span>2 révisions</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-check text-green-500 mr-2"></i>
+                                    <span>Livraison rapide</span>
+                                </div>
+                            </div>
+                            <button class="w-full bg-purple-600 text-white py-2 rounded-lg hover:bg-purple-700">
+                                Ajouter au panier
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Illustration -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                        <img src="/api/placeholder/400/300" alt="Illustration" class="w-full">
+                        <div class="p-6">
+                            <div class="flex justify-between items-start mb-4">
+                                <div>
+                                    <h3 class="font-bold text-xl mb-2">Illustration sur mesure</h3>
+                                    <p class="text-gray-600">Création unique</p>
+                                </div>
+                                <span class="text-xl font-bold text-purple-600">399€</span>
+                            </div>
+                            <div class="space-y-4 mb-6">
+                                <div class="flex items-center">
+                                    <i class="fas fa-check text-green-500 mr-2"></i>
+                                    <span>Style personnalisé</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-check text-green-500 mr-2"></i>
+                                    <span>Haute résolution</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-check text-green-500 mr-2"></i>
+                                    <span>Droits commerciaux</span>
+                                </div>
+                            </div>
+                            <button class="w-full bg-purple-600 text-white py-2 rounded-lg hover:bg-purple-700">
+                                Ajouter au panier
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Packs Promotionnels -->
+            <section class="mb-16">
+                <h2 class="text-3xl font-bold mb-8">Packs Promotionnels</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-white rounded-lg shadow-lg p-8 border-2 border-purple-600">
+                        <h3 class="text-2xl font-bold mb-4">Pack Démarrage</h3>
+                        <div class="text-3xl font-bold text-purple-600 mb-6">499€</div>
+                        <ul class="space-y-4 mb-8">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Logo professionnel</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Bannières réseaux sociaux</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Carte de visite</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Support prioritaire</span>
+                            </li>
+                        </ul>
+                        <button class="w-full bg-purple-600 text-white py-3 rounded-lg hover:bg-purple-700">
+                            Commander le pack
+                        </button>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-lg p-8 border-2 border-purple-600">
+                        <h3 class="text-2xl font-bold mb-4">Pack Premium</h3>
+                        <div class="text-3xl font-bold text-purple-600 mb-6">899€</div>
+                        <ul class="space-y-4 mb-8">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Tout le pack Démarrage</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Site web one-page</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Illustration personnalisée</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Support VIP</span>
+                            </li>
+                        </ul>
+                        <button class="w-full bg-purple-600 text-white py-3 rounded-lg hover:bg-purple-700">
+                            Commander le pack
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Produits Dérivés -->
+            <section>
+                <h2 class="text-3xl font-bold mb-8">Produits Dérivés</h2>
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                    <!-- T-Shirt -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                        <img src="/api/placeholder/400/400" alt="T-Shirt" class="w-full">
+                        <div class="p-4">
+                            <h3 class="font-bold mb-2">T-Shirt Rustikop</h3>
+                            <p class="text-gray-600 mb-4">100% coton bio</p>
+                            <div class="flex justify-between items-center">
+                                <span class="font-bold text-purple-600">29€</span>
+                                <button class="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700">
+                                    Ajouter
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Poster -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                        <img src="/api/placeholder/400/400" alt="Poster" class="w-full">
+                        <div class="p-4">
+                            <h3 class="font-bold mb-2">Poster Artistique</h3>
+                            <p class="text-gray-600 mb-4">Edition limitée</p>
+                            <div class="flex justify-between items-center">
+                                <span class="font-bold text-purple-600">25€</span>
+                                <button class="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700">
+                                    Ajouter
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Stickers -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                        <img src="/api/placeholder/400/400" alt="Stickers" class="w-full">
+                        <div class="p-4">
+                            <h3 class="font-bold mb-2">Pack Stickers</h

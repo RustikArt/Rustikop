@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rustikop - Les perspectives de l'art, réunies.</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-black text-white p-4 fixed w-full top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="text-2xl font-bold">Rustikop</div>
+            <div class="hidden md:flex space-x-6">
+                <a href="index.html" class="hover:text-yellow-400">Accueil</a>
+                <a href="portfolio.html" class="hover:text-yellow-400">Portfolio</a>
+                <a href="projets.html" class="hover:text-yellow-400">Nos Projets</a>
+                <a href="contact.html" class="hover:text-yellow-400">Contact</a>
+                <a href="magasin.html" class="hover:text-yellow-400">Magasin</a>                
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="pt-24 pb-16 px-4 bg-gradient-to-r from-purple-900 to-indigo-900 text-white">
+        <div class="container mx-auto text-center">
+            <h1 class="text-5xl font-bold mb-4">Bienvenue chez Rustikop</h1>
+            <p class="text-xl mb-8">Collectif artistique multidisciplinaire</p>
+            <button class="bg-yellow-400 text-black px-8 py-3 rounded-full font-bold hover:bg-yellow-300">
+                Découvrir nos projets
+            </button>
+        </div>
+    </header>
+
+    <!-- Services Section -->
+    <section class="py-16 px-4">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12">Nos Domaines Artistiques</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <a href="graphismePage.html">
+                    <div class="bg-white p-6 rounded-lg shadow-lg cursor-pointer hover:shadow-xl transition flex items-center space-x-4">
+                        <img src="https://cdn-icons-png.flaticon.com/128/18380/18380289.png" alt="Graphisme" class="w-12 h-auto rounded-lg">
+                        <div>
+                            <h3 class="text-xl font-bold mb-2">Graphisme</h3>
+                            <p>Création de logos, bannières et identités visuelles uniques.</p>
+                        </div>
+                    </div>                                                                  
+                </a>
+                <a href="musiquePage.html">
+                    <div class="bg-white p-6 rounded-lg shadow-lg cursor-pointer hover:shadow-xl transition flex items-center space-x-4">
+                        <img src="https://cdn-icons-png.flaticon.com/128/16739/16739926.png" alt="Musique" class="w-12 h-auto rounded-lg">
+                        <div>
+                            <h3 class="text-xl font-bold mb-2">Musique</h3>
+                            <p>Composition et production musicale pour tous vos projets.</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="développementPage.html">
+                <div class="bg-white p-6 rounded-lg shadow-lg cursor-pointer hover:shadow-xl transition flex items-center space-x-4">
+                    <img src="https://cdn-icons-png.flaticon.com/128/7838/7838457.png" alt="Développement" class="w-12 h-auto rounded-lg">
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">Développement</h3>
+                        <p>Solutions web et applications sur mesure.</p>
+                    </div>
+                </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-16 px-4 bg-gray-100">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12">Ce que disent nos clients</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                
+                <!-- Témoignage de Sarah -->
+                <a href="contact.html" class="block">
+                    <div class="bg-white p-6 rounded-lg shadow-lg cursor-pointer hover:shadow-xl transition">
+                        <div class="flex items-center mb-4">
+                            <img src="https://cdn-icons-png.flaticon.com/128/921/921089.png" alt="Client" class="rounded-full mr-4" width="60" height="60">
+                            <div>
+                                <h4 class="font-bold">Sarah D.</h4>
+                                <p class="text-gray-600">Directrice e-sport</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-700">"Une équipe créative et professionnelle. Le résultat final a dépassé mes attentes!"</p>
+                    </div>
+                </a>
+    
+                <!-- Témoignage de Marc -->
+                <a href="contact.html" class="block">
+                    <div class="bg-white p-6 rounded-lg shadow-lg cursor-pointer hover:shadow-xl transition">
+                        <div class="flex items-center mb-4">
+                            <img src="https://cdn-icons-png.flaticon.com/128/4532/4532510.png" alt="Client" class="rounded-full mr-4" width="60" height="60">
+                            <div>
+                                <h4 class="font-bold">Marc L.</h4>
+                                <p class="text-gray-600">CM de jeux vidéos</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-700">"Leur approche multidisciplinaire a apporté une vraie plus-value à mon projet."</p>
+                    </div>
+                </a>
+    
+            </div>
+        </div>
+    </section>    
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-12 px-4">
+        <div class="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div>
+                <h3 class="text-xl font-bold mb-4">Rustikop</h3>
+                <p>Les perspectives de l'art,</p>
+                <p>réunies.</p>
+            </div>
+            <div>
+                <h4 class="font-bold mb-4">Navigation</h4>
+                <ul class="space-y-2">
+                    <li><a href="index.html" class="hover:text-yellow-400">Accueil</a></li>
+                    <li><a href="portfolio.html" class="hover:text-yellow-400">Portfolio</a></li>
+                    <li><a href="projets.html" class="hover:text-yellow-400">Nos Projets</a></li>
+                    <li><a href="contact.html" class="hover:text-yellow-400">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold mb-4">Suivez-nous</h4>
+                <ul class="space-y-2">
+                    <li><a href="#" class="hover:text-yellow-400">Instagram</a></li>
+                    <li><a href="#" class="hover:text-yellow-400">TikTok</a></li>
+                    <li><a href="#" class="hover:text-yellow-400">YouTube</a></li>
+                    <li><a href="#" class="hover:text-yellow-400">Discord</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold mb-4">Contact</h4>
+                <button class="bg-yellow-400 text-black px-6 py-2 rounded-full font-bold hover:bg-yellow-300">
+                    Contactez-nous
+                </button>
+            </div>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Gestion du bouton "Découvrir nos projets"
+            const decouvrirProjetsBtn = document.querySelector('header button');
+            if (decouvrirProjetsBtn) {
+                decouvrirProjetsBtn.addEventListener('click', function() {
+                    window.location.href = 'projets.html';
+                });
+            }
+
+            // Gestion du bouton "Contactez-nous" dans le footer
+            const contactBtn = document.querySelector('footer button');
+            if (contactBtn) {
+                contactBtn.addEventListener('click', function() {
+                    window.location.href = 'contact.html';
+                });
+            }
+
+            // Menu mobile responsive (toggle)
+            const navToggle = document.createElement('div');
+            navToggle.innerHTML = '☰';
+            navToggle.classList.add('md:hidden', 'text-2xl', 'cursor-pointer');
+            
+            const navMenu = document.querySelector('nav .container');
+            const navLinks = document.querySelector('nav .hidden');
+            
+            if (navMenu && navLinks) {
+                navMenu.insertBefore(navToggle, navMenu.firstChild);
+                
+                navToggle.addEventListener('click', function() {
+                    navLinks.classList.toggle('hidden');
+                    navLinks.classList.toggle('flex');
+                    navLinks.classList.toggle('flex-col');
+                    navLinks.classList.add('absolute', 'top-16', 'left-0', 'w-full', 'bg-black', 'p-4');
+                });
+            }
+        });
+    </script>
+</body>
+</html>

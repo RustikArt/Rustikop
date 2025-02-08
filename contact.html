@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rustikop - Contact</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-black text-white p-4 fixed w-full top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="text-2xl font-bold">Rustikop</div>
+            <div class="hidden md:flex space-x-6">
+                <a href="index.html" class="hover:text-yellow-400">Accueil</a>
+                <a href="portfolio.html" class="hover:text-yellow-400">Portfolio</a>
+                <a href="projets.html" class="hover:text-yellow-400">Nos Projets</a>
+                <a href="contact.html" class="hover:text-yellow-400">Contact</a>
+                <a href="magasin.html" class="hover:text-yellow-400">Magasin</a>                
+            </div>
+        </div>
+    </nav>
+
+    <!-- En-tête -->
+    <header class="pt-24 pb-12 px-4 bg-gradient-to-r from-purple-900 to-indigo-900 text-white">
+        <div class="container mx-auto text-center">
+            <h1 class="text-4xl font-bold mb-4">Contactez-nous</h1>
+            <p class="text-xl">Prenons contact et créons ensemble</p>
+        </div>
+    </header>
+
+    <!-- Principales sections de contact -->
+    <section class="py-16 px-4">
+        <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
+            <!-- Formulaire de contact -->
+            <div class="bg-white p-8 rounded-lg shadow-lg">
+                <h2 class="text-2xl font-bold mb-6">Envoyez-nous un message</h2>
+                <form class="space-y-6">
+                    <div>
+                        <label class="block text-gray-700 mb-2">Nom</label>
+                        <input type="text" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-purple-500">
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 mb-2">Email</label>
+                        <input type="email" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-purple-500">
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 mb-2">Sujet</label>
+                        <select class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-purple-500">
+                            <option>Collaboration artistique</option>
+                            <option>Demande de devis</option>
+                            <option>Question générale</option>
+                            <option>Support technique</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 mb-2">Message</label>
+                        <textarea rows="4" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-purple-500"></textarea>
+                    </div>
+                    <button class="w-full bg-purple-600 text-white py-3 rounded-lg hover:bg-purple-700 transition duration-300">
+                        Envoyer le message
+                    </button>
+                </form>
+            </div>
+
+            <!-- Réseaux sociaux -->
+            <div class="space-y-8">
+                <div class="bg-white p-8 rounded-lg shadow-lg">
+                    <h2 class="text-2xl font-bold mb-6">Suivez-nous</h2>
+                    <div class="grid grid-cols-2 gap-4">
+                        <a href="#" class="flex items-center p-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-lg hover:opacity-90">
+                            <i class="fab fa-instagram text-2xl mr-3"></i>
+                            <div>
+                                <div class="font-bold">Instagram</div>
+                                <div class="text-sm">@rustikop_art</div>
+                            </div>
+                        </a>
+                        <a href="#" class="flex items-center p-4 bg-black text-white rounded-lg hover:opacity-90">
+                            <i class="fab fa-tiktok text-2xl mr-3"></i>
+                            <div>
+                                <div class="font-bold">TikTok</div>
+                                <div class="text-sm">@rustikop</div>
+                            </div>
+                        </a>
+                        <a href="#" class="flex items-center p-4 bg-red-600 text-white rounded-lg hover:opacity-90">
+                            <i class="fab fa-youtube text-2xl mr-3"></i>
+                            <div>
+                                <div class="font-bold">YouTube</div>
+                                <div class="text-sm">Rustikop Official</div>
+                            </div>
+                        </a>
+                        <a href="#" class="flex items-center p-4 bg-indigo-600 text-white rounded-lg hover:opacity-90">
+                            <i class="fab fa-discord text-2xl mr-3"></i>
+                            <div>
+                                <div class="font-bold">Discord</div>
+                                <div class="text-sm">Rejoindre</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Dernières vidéos -->
+                <div class="bg-white p-8 rounded-lg shadow-lg">
+                    <h2 class="text-2xl font-bold mb-6">Nos dernières vidéos</h2>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="relative">
+                            <img src="/api/placeholder/400/225" alt="Vidéo 1" class="w-full rounded-lg">
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <button class="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-lg">
+                                    <i class="fas fa-play text-purple-600"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="relative">
+                            <img src="/api/placeholder/400/225" alt="Vidéo 2" class="w-full rounded-lg">
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <button class="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-lg">
+                                    <i class="fas fa-play text-purple-600"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Player Music -->
+                <div class="bg-white p-8 rounded-lg shadow-lg">
+                    <h2 class="text-2xl font-bold mb-6">Notre musique</h2>
+                    <div class="space-y-4">
+                        <div class="p-4 bg-gray-100 rounded-lg">
+                            <div class="flex items-center justify-between mb-4">
+                                <div>
+                                    <h3 class="font-bold">Dernier single</h3>
+                                    <p class="text-sm text-gray-600">Rustikop - Horizon</p>
+                                </div>
+                                <button class="w-10 h-10 bg-purple-600 rounded-full flex items-center justify-center text-white">
+                                    <i class="fas fa-play"></i>
+                                </button>
+                            </div>
+                            <div class="h-2 bg-gray-200 rounded">
+                                <div class="h-2 bg-purple-600 rounded" style="width: 60%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-16 px-4 bg-gray-100">
+        <div class="container mx-auto max-w-3xl">
+            <h2 class="text-3xl font-bold mb-8 text-center">Questions fréquentes</h2>
+            <div class="space-y-4">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="font-bold mb-2">Comment puis-je collaborer avec Rustikop ?</h3>
+                    <p class="text-gray-600">Envoyez-nous un message via notre formulaire de contact en sélectionnant "Collaboration artistique" comme sujet. Nous étudions toutes les propositions avec attention.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="font-bold mb-2">Quels sont vos délais de réponse ?</h3>
+                    <p class="text-gray-600">Nous nous efforçons de répondre à toutes les demandes sous 48h ouvrées.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="font-bold mb-2">Proposez-vous des services sur mesure ?</h3>
+                    <p class="text-gray-600">Oui, nous adaptons nos services à vos besoins spécifiques. Contactez-nous pour en discuter.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-12 px-4">
+        <div class="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div>
+                <h3 class="text-xl font-bold mb-4">Rustikop</h3>
+                <p>Collectif artistique innovant</p>
+            </div>
+            <div>
+                <h4 class="font-bold mb-4">Navigation</h4>
+                <ul class="space-y-2">
+                    <li><a href="index.html" class="hover:text-yellow-400">Accueil</a></li>
+                    <li><a href="portfolio.html" class="hover:text-yellow-400">Portfolio</a></li>
+                    <li><a href="projets.html" class="hover:text-yellow-400">Nos Projets</a></li>
+                    <li><a href="contact.html" class="hover:text-yellow-400">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold mb-4">Suivez-nous</h4>
+                <ul class="space-y-2">
+                    <li><a href="#" class="hover:text-yellow-400">Instagram</a></li>
+                    <li><a href="#" class="hover:text-yellow-400">TikTok</a></li>
+                    <li><a href="#" class="hover:text-yellow-400">YouTube</a></li>
+                    <li><a href="#" class="hover:text-yellow-400">Discord</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold mb-4">Contact</h4>
+                <button class="bg-yellow-400 text-black px-6 py-2 rounded-full font-bold hover:bg-yellow-300">
+                    Contactez-nous
+                </button>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

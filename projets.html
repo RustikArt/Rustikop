@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rustikop - Nos Projets</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-black text-white p-4 fixed w-full top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="text-2xl font-bold">Rustikop</div>
+            <div class="hidden md:flex space-x-6">
+                <a href="index.html" class="hover:text-yellow-400">Accueil</a>
+                <a href="portfolio.html" class="hover:text-yellow-400">Portfolio</a>
+                <a href="projets.html" class="hover:text-yellow-400">Nos Projets</a>
+                <a href="contact.html" class="hover:text-yellow-400">Contact</a>
+                <a href="magasin.html" class="hover:text-yellow-400">Magasin</a>                
+            </div>
+        </div>
+    </nav>
+
+    <!-- En-tête -->
+    <header class="pt-24 pb-12 px-4 bg-gradient-to-r from-purple-900 to-indigo-900 text-white">
+        <div class="container mx-auto text-center">
+            <h1 class="text-4xl font-bold mb-4">Nos Projets</h1>
+            <p class="text-xl mb-8">Découvrez nos projets en cours et à venir</p>
+            <div class="flex justify-center gap-4">
+                <button class="bg-purple-600 text-white px-6 py-2 rounded-full hover:bg-purple-700">Projets en cours</button>
+                <button class="bg-white text-purple-900 px-6 py-2 rounded-full hover:bg-gray-100">Projets à venir</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Projets en cours -->
+    <section class="py-16 px-4">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold mb-12 text-center">Projets en cours</h2>
+            
+            <!-- Timeline -->
+            <div class="relative">
+                <!-- Ligne verticale -->
+                <div class="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-purple-200"></div>
+
+                <!-- Projet 1 -->
+                <div class="mb-16 relative">
+                    <div class="absolute left-1/2 transform -translate-x-1/2 -mt-2">
+                        <div class="w-4 h-4 bg-purple-600 rounded-full"></div>
+                    </div>
+                    <div class="relative ml-auto w-1/2 pl-8">
+                        <div class="bg-white p-6 rounded-lg shadow-lg">
+                            <span class="text-sm text-purple-600 font-semibold">70% complété</span>
+                            <h3 class="text-2xl font-bold mt-2 mb-4">Album "Synthèse"</h3>
+                            <p class="text-gray-600 mb-4">Notre premier album collaboratif mêlant musique électronique et instruments traditionnels.</p>
+                            <div class="h-2 bg-gray-200 rounded mb-4">
+                                <div class="h-2 bg-purple-600 rounded" style="width: 70%"></div>
+                            </div>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-3 py-1 bg-purple-100 text-purple-600 rounded-full text-sm">Musique</span>
+                                <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">Production</span>
+                            </div>
+                            <button class="text-purple-600 font-bold hover:text-purple-700">En savoir plus →</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projet 2 -->
+                <div class="mb-16 relative">
+                    <div class="absolute left-1/2 transform -translate-x-1/2 -mt-2">
+                        <div class="w-4 h-4 bg-purple-600 rounded-full"></div>
+                    </div>
+                    <div class="relative w-1/2 pr-8">
+                        <div class="bg-white p-6 rounded-lg shadow-lg">
+                            <span class="text-sm text-purple-600 font-semibold">40% complété</span>
+                            <h3 class="text-2xl font-bold mt-2 mb-4">Court-métrage "Échos"</h3>
+                            <p class="text-gray-600 mb-4">Un court-métrage expérimental sur la résonance entre art numérique et émotions humaines.</p>
+                            <div class="h-2 bg-gray-200 rounded mb-4">
+                                <div class="h-2 bg-purple-600 rounded" style="width: 40%"></div>
+                            </div>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-3 py-1 bg-red-100 text-red-600 rounded-full text-sm">Vidéo</span>
+                                <span class="px-3 py-1 bg-yellow-100 text-yellow-600 rounded-full text-sm">Animation</span>
+                            </div>
+                            <button class="text-purple-600 font-bold hover:text-purple-700">En savoir plus →</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projet 3 -->
+                <div class="mb-16 relative">
+                    <div class="absolute left-1/2 transform -translate-x-1/2 -mt-2">
+                        <div class="w-4 h-4 bg-purple-600 rounded-full"></div>
+                    </div>
+                    <div class="relative ml-auto w-1/2 pl-8">
+                        <div class="bg-white p-6 rounded-lg shadow-lg">
+                            <span class="text-sm text-purple-600 font-semibold">85% complété</span>
+                            <h3 class="text-2xl font-bold mt-2 mb-4">Application "ArtFlow"</h3>
+                            <p class="text-gray-600 mb-4">Une application mobile permettant de créer des œuvres d'art collaboratives en temps réel.</p>
+                            <div class="h-2 bg-gray-200 rounded mb-4">
+                                <div class="h-2 bg-purple-600 rounded" style="width: 85%"></div>
+                            </div>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-3 py-1 bg-green-100 text-green-600 rounded-full text-sm">Développement</span>
+                                <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">UI/UX</span>
+                            </div>
+                            <button class="text-purple-600 font-bold hover:text-purple-700">En savoir plus →</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projets à venir -->
+    <section class="py-16 px-4 bg-gray-100">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold mb-12 text-center">Projets à venir</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Projet Futur 1 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="/api/placeholder/400/250" alt="BD Interactive" class="w-full">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-3 py-1 bg-yellow-100 text-yellow-600 rounded-full text-sm">Été 2025</span>
+                            <span class="px-3 py-1 bg-purple-100 text-purple-600 rounded-full text-sm">BD</span>
+                        </div>
+                        <h3 class="font-bold text-xl mb-2">BD Interactive "Fragments"</h3>
+                        <p class="text-gray-600 mb-4">Une BD numérique où les choix du lecteur influencent l'histoire.</p>
+                        <button class="w-full bg-purple-600 text-white py-2 rounded-lg hover:bg-purple-700">
+                            S'inscrire aux updates
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Projet Futur 2 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="/api/placeholder/400/250" alt="Festival" class="w-full">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-3 py-1 bg-yellow-100 text-yellow-600 rounded-full text-sm">Automne 2025</span>
+                            <span class="px-3 py-1 bg-purple-100 text-purple-600 rounded-full text-sm">Événement</span>
+                        </div>
+                        <h3 class="font-bold text-xl mb-2">Festival "Arts Numériques"</h3>
+                        <p class="text-gray-600 mb-4">Un festival mêlant performances live, installations interactives et ateliers.</p>
+                        <button class="w-full bg-purple-600 text-white py-2 rounded-lg hover:bg-purple-700">
+                            S'inscrire aux updates
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Projet Futur 3 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="/api/placeholder/400/250" alt="Jeu VR" class="w-full">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-3 py-1 bg-yellow-100 text-yellow-600 rounded-full text-sm">Hiver 2025</span>
+                            <span class="px-3 py-1 bg-purple-100 text-purple-600 rounded-full text-sm">VR</span>
+                        </div>
+                        <h3 class="font-bold text-xl mb-2">Expérience VR "Immersion"</h3>
+                        <p class="text-gray-600 mb-4">Une expérience artistique en réalité virtuelle mêlant son, image et interaction.</p>
+                        <button class="w-full bg-purple-600 text-white py-2 rounded-lg hover:bg-purple-700">
+                            S'inscrire aux updates
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="py-16 px-4">
+        <div class="container mx-auto max-w-2xl text-center">
+            <h2 class="text-3xl font-bold mb-4">Restez informé</h2>
+            <p class="text-gray-600 mb-8">Inscrivez-vous à notre newsletter pour suivre l'avancement de nos projets</p>
+            <div class="flex gap-4 justify-center">
+                <input type="email" placeholder="Votre email" class="px-4 py-2 border rounded-lg flex-grow">
+                <button class="bg-purple-600 text-white px-8 py-2 rounded-lg hover:bg-purple-700">
+                    S'inscrire
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-12 px-4">
+        <div class="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div>
+                <h3 class="text-xl font-bold mb-4">Rustikop</h3>
+                <p>Collectif artistique innovant</p>
+            </div>
+            <div>
+                <h4 class="font-bold mb-4">Navigation</h4>
+                <ul class="space-y-2">
+                    <li><a href="index.html" class="hover:text-yellow-400">Accueil</a></li>
+                    <li><a href="portfolio.html" class="hover:text-yellow-400">Portfolio</a></li>
+                    <li><a href="projets.html" class="hover:text-yellow-400">Nos Projets</a></li>
+                    <li><a href="contact.html" class="hover:text-yellow-400">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold mb-4">Suivez-nous</h4>
+                <ul class="space-y-2">
+                    <li><a href="#" class="hover:text-yellow-400">Instagram</a></li>
+                    <li><a href="#" class="hover:text-yellow-400">TikTok</a></li>
+                    <li><a href="#" class="hover:text-yellow-400">YouTube</a></li>
+                    <li><a href="#" class="hover:text-yellow-400">Discord</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold mb-4">Contact</h4>
+                <button class="bg-yellow-400 text-black px-6 py-2 rounded-full font-bold hover:bg-yellow-300">
+                    Contactez-nous
+                </button>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

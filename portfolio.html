@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rustikop - Portfolio</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <script>
+        // Fonction pour filtrer les projets
+        function filterProjects(category) {
+            const allSections = document.querySelectorAll('.project-section');
+            allSections.forEach(section => {
+                if (category === "Tout" || section.classList.contains(category)) {
+                    section.style.display = "block";
+                } else {
+                    section.style.display = "none";
+                }
+            });
+
+            // Changer la couleur du bouton actif
+            const buttons = document.querySelectorAll('.filter-button');
+            buttons.forEach(button => {
+                if (button.textContent === category) {
+                    button.classList.add('bg-purple-600', 'text-white');
+                    button.classList.remove('bg-gray-200', 'text-gray-700');
+                } else {
+                    button.classList.remove('bg-purple-600', 'text-white');
+                    button.classList.add('bg-gray-200', 'text-gray-700');
+                }
+            });
+        }
+    </script>
+</head>
+<body class="bg-gray-50">
+    <nav class="bg-black text-white p-4 fixed w-full top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="index.html" class="block">
+                <div class="text-2xl font-bold">Rustikop</div>
+            </a>
+            <div class="hidden md:flex space-x-6">
+                <a href="index.html" class="hover:text-yellow-400">Accueil</a>
+                <a href="portfolio.html" class="hover:text-yellow-400">Portfolio</a>
+                <a href="projets.html" class="hover:text-yellow-400">Nos Projets</a>
+                <a href="contact.html" class="hover:text-yellow-400">Contact</a>
+                <a href="magasin.html" class="hover:text-yellow-400">Magasin</a>                
+            </div>
+        </div>
+    </nav>
+
+    <header class="pt-24 pb-12 px-4">
+        <div class="container mx-auto text-center">
+            <h1 class="text-4xl font-bold mb-4">Notre Portfolio</h1>
+            <p class="text-xl text-gray-600 mb-8">Découvrez nos créations à travers différents thèmes artistiques</p>
+        </div>
+    </header>
+
+    <section class="pb-8 px-4">
+        <div class="container mx-auto">
+            <div class="flex flex-wrap justify-center gap-4 mb-8">
+                <button class="filter-button px-6 py-2 bg-purple-600 text-white rounded-full hover:bg-purple-700" onclick="filterProjects('Tout')">Tout</button>
+                <button class="filter-button px-6 py-2 bg-gray-200 text-gray-700 rounded-full hover:bg-gray-300" onclick="filterProjects('Graphisme')">Graphisme</button>
+                <button class="filter-button px-6 py-2 bg-gray-200 text-gray-700 rounded-full hover:bg-gray-300" onclick="filterProjects('Musique')">Musique</button>
+                <button class="filter-button px-6 py-2 bg-gray-200 text-gray-700 rounded-full hover:bg-gray-300" onclick="filterProjects('Vidéo')">Vidéo</button>
+                <button class="filter-button px-6 py-2 bg-gray-200 text-gray-700 rounded-full hover:bg-gray-300" onclick="filterProjects('Codage')">Codage</button>
+                <button class="filter-button px-6 py-2 bg-gray-200 text-gray-700 rounded-full hover:bg-gray-300" onclick="filterProjects('BD')">BD</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-8 px-4">
+        <div class="container mx-auto">
+            <div class="project-section Graphisme mb-16">
+                <h2 class="text-2xl font-bold mb-8 px-4">Graphisme</h2>
+                <div class="overflow-x-auto relative">
+                    <div class="flex space-x-8 pb-4">
+                        <div class="space-x-6 flex items-center bg-white p-3 rounded-lg shadow-lg cursor-pointer hover:shadow-xl transition">
+                            <img src="https://cdn-icons-png.flaticon.com/128/2021/2021763.png" alt="Projet Logo" width="60" height="60">
+                            <div class="p-6">
+                                <h3 class="font-bold text-xl mb-2">Logo, bannières, ...</h3>
+                                <p class="text-gray-600 mb-4">Création d'identité visuelle pour une startup</p>
+                                <button class="text-purple-600 font-bold hover:text-purple-700">Voir plus →</button>
+                            </div>
+                        </div>
+                        <div class="space-x-6 flex items-center bg-white p-3 rounded-lg shadow-lg cursor-pointer hover:shadow-xl transition">
+                            <img src="https://cdn-icons-png.flaticon.com/128/4133/4133179.png" alt="Projet Affiche" width="60" height="60">
+                            <div class="p-6">
+                                <h3 class="font-bold text-xl mb-2">Affiche Événement</h3>
+                                <p class="text-gray-600 mb-4">Design d'affiche pour festival de musique</p>
+                                <button class="text-purple-600 font-bold hover:text-purple-700">Voir plus →</button>
+                            </div>
+                        </div>
+                        <div class="space-x-6 flex items-center bg-white p-3 rounded-lg shadow-lg cursor-pointer hover:shadow-xl transition">
+                            <img src="https://cdn-icons-png.flaticon.com/128/4152/4152699.png" alt="Projet Branding" width="60" height="60">
+                            <div class="p-6">
+                                <h3 class="font-bold text-xl mb-2">Branding Complet</h3>
+                                <p class="text-gray-600 mb-4">Identité visuelle pour restaurant</p>
+                                <button class="text-purple-600 font-bold hover:text-purple-700">Voir plus →</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Barre de défilement -->
+                    <div class="absolute bottom-0 left-0 right-0 h-2 bg-gray-200">
+                        <div class="w-full h-full bg-purple-600 rounded"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>    
+
+<!-- Section Musique -->
+<div class="project-section Musique mb-16">
+    <h2 class="text-2xl font-bold mb-8 px-4">Musique</h2>
+
+    <!-- Section des lecteurs avec défilement horizontal -->
+    <div class="relative overflow-x-auto px-4">
+        <div class="flex space-x-8 pb-4" id="audioCarousel">
+            
+            <!-- Premier lecteur audio avec SoundCloud -->
+            <div class="bg-white rounded-lg shadow-lg p-6 flex-shrink-0 w-[400px]">
+                <h3 class="font-bold text-xl mb-4">Sun Is Down</h3>
+                <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Frustik-878376867%2Fsun-is-down%3Fsi%3D936a12ef3dcd4d9189cad5a021dbabdb%26utm_source%3Dclipboard%26utm_medium%3Dtext%26utm_campaign%3Dsocial_sharing&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&visual=true"></iframe>
+            </div>
+
+            <!-- Deuxième lecteur audio avec SoundCloud -->
+            <div class="bg-white rounded-lg shadow-lg p-6 flex-shrink-0 w-[400px]">
+                <h3 class="font-bold text-xl mb-4">SweetStar</h3>
+                <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Frustik-878376867%2Fsweetstar%3Fsi%3D5895041e37024ec4b83df9625a6f0eeb%26utm_source%3Dclipboard%26utm_medium%3Dtext%26utm_campaign%3Dsocial_sharing&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&visual=true"></iframe>
+            </div>
+
+            <!-- Troisième lecteur audio avec SoundCloud -->
+            <div class="bg-white rounded-lg shadow-lg p-6 flex-shrink-0 w-[400px]">
+                <h3 class="font-bold text-xl mb-4">BestMoon</h3>
+                <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Frustik-878376867%2Feclipse%3Fsi%3D44f24ae99c8c47c5bbceff796f3f4b3e%26utm_source%3Dclipboard%26utm_medium%3Dtext%26utm_campaign%3Dsocial_sharing&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&visual=true"></iframe>
+            </div>
+
+            <!-- Quatrième lecteur audio avec SoundCloud -->
+            <div class="bg-white rounded-lg shadow-lg p-6 flex-shrink-0 w-[400px]">
+                <h3 class="font-bold text-xl mb-4">Eclipse</h3>
+                <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Frustik-878376867%2Feclipse-deluxe%3Fsi%3Deb4b5919d3f2441c8c5548c704378426%26utm_source%3Dclipboard%26utm_medium%3Dtext%26utm_campaign%3Dsocial_sharing&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&visual=true"></iframe>
+            </div>
+
+            <!-- Cinquième lecteur audio avec SoundCloud -->
+            <div class="bg-white rounded-lg shadow-lg p-6 flex-shrink-0 w-[400px]">
+                <h3 class="font-bold text-xl mb-4">SunVibes</h3>
+                <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Frustik-878376867%2Fsunvibesterminer-mp3%3Fsi%3Da7000116e5f34d6691da8352b4109268%26utm_source%3Dclipboard%26utm_medium%3Dtext%26utm_campaign%3Dsocial_sharing&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&visual=true"></iframe>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+// Fonction de défilement horizontal
+const graphismeCarousel = document.getElementById('graphismeCarousel');
+const audioCarousel = document.getElementById('audioCarousel');
+
+// Ajout de la fonctionnalité de défilement horizontal pour Graphisme
+graphismeCarousel.addEventListener('wheel', (e) => {
+    if (e.deltaY > 0) {
+        graphismeCarousel.scrollBy({
+            left: 200,
+            behavior: 'smooth',
+        });
+    } else {
+        graphismeCarousel.scrollBy({
+            left: -200,
+            behavior: 'smooth',
+        });
+    }
+});
+
+// Ajout de la fonctionnalité de défilement horizontal pour Musique
+audioCarousel.addEventListener('wheel', (e) => {
+    if (e.deltaY > 0) {
+        audioCarousel.scrollBy({
+            left: 200,
+            behavior: 'smooth',
+        });
+    } else {
+        audioCarousel.scrollBy({
+            left: -200,
+            behavior: 'smooth',
+        });
+    }
+});
+</script>
+
+            <div class="project-section Vidéo mb-16">
+                <h2 class="text-2xl font-bold mb-8 px-4">Vidéo</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                        <div class="relative">
+                            <img src="/api/placeholder/400/300" alt="Court-métrage" class="w-full">
+                            <button class="absolute inset-0 w-full h-full flex items-center justify-center">
+                                <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center">
+                                    <span class="text-purple-600 text-2xl">▶</span>
+                                </div>
+                            </button>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-bold text-xl mb-2">Court-métrage "Écho"</h3>
+                            <p class="text-gray-600">Film expérimental sur la solitude urbaine</p>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                        <div class="relative">
+                            <img src="/api/placeholder/400/300" alt="Animation" class="w-full">
+                            <button class="absolute inset-0 w-full h-full flex items-center justify-center">
+                                <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center">
+                                    <span class="text-purple-600 text-2xl">▶</span>
+                                </div>
+                            </button>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-bold text-xl mb-2">Animation "Cycles"</h3>
+                            <p class="text-gray-600">Animation 2D sur le cycle de la vie</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-section Codage mb-16">
+                <h2 class="text-2xl font-bold mb-8 px-4">Codage</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-white rounded-lg shadow-lg p-6">
+                        <div class="h-48 bg-gray-100 rounded-lg mb-4 flex items-center justify-center">
+                            <span class="text-4xl">🎮</span>
+                        </div>
+                        <h3 class="font-bold text-xl mb-2">Mini-jeu Web</h3>
+                        <p class="text-gray-600 mb-4">Jeu interactif en JavaScript</p>
+                        <div class="flex space-x-2">
+                            <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">JavaScript</span>
+                            <span class="px-3 py-1 bg-yellow-100 text-yellow-600 rounded-full text-sm">HTML5</span>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-lg p-6">
+                        <div class="h-48 bg-gray-100 rounded-lg mb-4 flex items-center justify-center">
+                            <span class="text-4xl">📱</span>
+                        </div>
+                        <h3 class="font-bold text-xl mb-2">Application Mobile</h3>
+                        <p class="text-gray-600 mb-4">App de méditation guidée</p>
+                        <div class="flex space-x-2">
+                            <span class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">React Native</span>
+                            <span class="px-3 py-1 bg-green-100 text-green-600 rounded-full text-sm">Node.js</span>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-lg p-6">
+                        <div class="h-48 bg-gray-100 rounded-lg mb-4 flex items-center justify-center">
+                            <span class="text-4xl">🎨</span>
+                        </div>
+                        <h3 class="font-bold text-xl mb-2">Générateur d'Art</h3>
+                        <p class="text-gray-600 mb-4">Art génératif avec P5.js</p>
+                        <div class="flex space-x-2">
+                            <span class="px-3 py-1 bg-purple-100 text-purple-600 rounded-full text-sm">P5.js</span>
+                            <span class="px-3 py-1 bg-red-100 text-red-600 rounded-full text-sm">Processing</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-section BD mb-16">
+                <h2 class="text-2xl font-bold mb-8 px-4">BD</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                        <img src="/api/placeholder/400/300" alt="BD Aventure" class="w-full">
+                        <div class="p-6">
+                            <h3 class="font-bold text-xl mb-2">Les Aventures de Max</h3>
+                            <p class="text-gray-600 mb-4">Série BD en 3 tomes</p>
+                            <button class="text-purple-600 font-bold hover:text-purple-700">Lire un extrait →</button>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                        <img src="/api/placeholder/400/300" alt="BD Webcomic" class="w-full">
+                        <div class="p-6">
+                            <h3 class="font-bold text-xl mb-2">Quotidien Décalé</h3>
+                            <p class="text-gray-600 mb-4">Webcomic hebdomadaire</p>
+                            <button class="text-purple-600 font-bold hover:text-purple-700">Lire un extrait →</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-12 px-4">
+        <div class="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div>
+                <h3 class="text-xl font-bold mb-4">Rustikop</h3>
+                <p>Collectif artistique innovant</p>
+            </div>
+            <div>
+                <h4 class="font-bold mb-4">Navigation</h4>
+                <ul class="space-y-2">
+                    <li><a href="index.html" class="hover:text-yellow-400">Accueil</a></li>
+                    <li><a href="portfolio.html" class="hover:text-yellow-400">Portfolio</a></li>
+                    <li><a href="projets.html" class="hover:text-yellow-400">Nos Projets</a></li>
+                    <li><a href="contact.html" class="hover:text-yellow-400">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold mb-4">Suivez-nous</h4>
+                <ul class="space-y-2">
+                    <li><a href="#" class="hover:text-yellow-400">Instagram</a></li>
+                    <li><a href="#" class="hover:text-yellow-400">TikTok</a></li>
+                    <li><a href="#" class="hover:text-yellow-400">YouTube</a></li>
+                    <li><a href="#" class="hover:text-yellow-400">Discord</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold mb-4">Contact</h4>
+                <button class="bg-yellow-400 text-black px-6 py-2 rounded-full font-bold hover:bg-yellow-300">
+                    Contactez-nous
+                </button>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
