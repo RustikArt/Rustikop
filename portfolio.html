@@ -107,14 +107,24 @@
         </div>
     </section>    
 
-<!-- Section Musique -->
-<div class="project-section Musique mb-16">
-    <h2 class="text-2xl font-bold mb-8 px-4">Musique</h2>
-
-    <!-- Section des lecteurs avec défilement horizontal -->
-    <div class="relative overflow-x-auto px-4">
-        <div class="flex space-x-8 pb-4" id="audioCarousel">
-            
+    <div class="project-section Musique mb-16">
+        <h2 class="text-2xl font-bold mb-8 px-4">Musique</h2>
+    
+        <!-- Container du carrousel -->
+        <div class="relative">
+            <!-- Flèche gauche -->
+            <button class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-purple-600 text-white p-2 rounded-full focus:outline-none hover:bg-purple-700" id="prevButton">
+                ←
+            </button>
+    
+            <!-- Flèche droite -->
+            <button class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-purple-600 text-white p-2 rounded-full focus:outline-none hover:bg-purple-700" id="nextButton">
+                →
+            </button>
+    
+            <!-- Section des lecteurs avec défilement horizontal -->
+            <div class="flex overflow-x-auto space-x-8 px-4 pb-4" id="audioCarousel">
+                
             <!-- Premier lecteur audio avec SoundCloud -->
             <div class="bg-white rounded-lg shadow-lg p-6 flex-shrink-0 w-[400px]">
                 <h3 class="font-bold text-xl mb-4">Sun Is Down</h3>
@@ -146,43 +156,29 @@
             </div>
         </div>
     </div>
-</div>
-
-<script>
-// Fonction de défilement horizontal
-const graphismeCarousel = document.getElementById('graphismeCarousel');
-const audioCarousel = document.getElementById('audioCarousel');
-
-// Ajout de la fonctionnalité de défilement horizontal pour Graphisme
-graphismeCarousel.addEventListener('wheel', (e) => {
-    if (e.deltaY > 0) {
-        graphismeCarousel.scrollBy({
-            left: 200,
+    
+    <script>
+    // Fonction de défilement
+    const prevButton = document.getElementById('prevButton');
+    const nextButton = document.getElementById('nextButton');
+    const carousel = document.getElementById('audioCarousel');
+    
+    // Défilement à gauche
+    prevButton.addEventListener('click', () => {
+        carousel.scrollBy({
+            left: -400, // Décale de la largeur d'un widget
             behavior: 'smooth',
         });
-    } else {
-        graphismeCarousel.scrollBy({
-            left: -200,
+    });
+    
+    // Défilement à droite
+    nextButton.addEventListener('click', () => {
+        carousel.scrollBy({
+            left: 400, // Décale de la largeur d'un widget
             behavior: 'smooth',
         });
-    }
-});
-
-// Ajout de la fonctionnalité de défilement horizontal pour Musique
-audioCarousel.addEventListener('wheel', (e) => {
-    if (e.deltaY > 0) {
-        audioCarousel.scrollBy({
-            left: 200,
-            behavior: 'smooth',
-        });
-    } else {
-        audioCarousel.scrollBy({
-            left: -200,
-            behavior: 'smooth',
-        });
-    }
-});
-</script>
+    });
+    </script>
 
             <div class="project-section Vidéo mb-16">
                 <h2 class="text-2xl font-bold mb-8 px-4">Vidéo</h2>
