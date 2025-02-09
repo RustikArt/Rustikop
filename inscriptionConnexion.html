@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rustikop - Inscription</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-black text-white p-4 fixed w-full top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="text-2xl font-bold">Rustikop</div>
+            <div class="hidden md:flex space-x-6">
+                <a href="index.html" class="hover:text-yellow-400">Accueil</a>
+                <a href="portfolio.html" class="hover:text-yellow-400">Portfolio</a>
+                <a href="projets.html" class="hover:text-yellow-400">Nos Projets</a>
+                <a href="contact.html" class="hover:text-yellow-400">Contact</a>
+                <a href="magasin.html" class="hover:text-yellow-400">Magasin</a>                
+            </div>
+            <div class="flex items-center space-x-4">
+                <button class="hover:text-yellow-400">
+                    <i class="fas fa-search text-xl"></i>
+                </button>
+                <button class="hover:text-yellow-400 relative">
+                    <i class="fas fa-shopping-cart text-xl"></i>
+                    <span class="absolute -top-2 -right-2 bg-yellow-400 text-black w-5 h-5 rounded-full text-xs flex items-center justify-center">0</span>
+                </button>
+                <!-- Icône d'inscription avec un espacement -->
+                <a href="inscriptionConnexion.html" class="hover:text-yellow-400 ml-4">
+                    <i class="fas fa-user-circle text-xl"></i> <!-- Icône utilisateur -->
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="pt-24 pb-16 px-4 bg-gradient-to-r from-purple-900 to-indigo-900 text-white">
+        <div class="container mx-auto text-center">
+            <h1 class="text-5xl font-bold mb-4">Inscription chez Rustikop</h1>
+            <p class="text-xl mb-8">Rejoignez notre collectif artistique multidisciplinaire</p>
+        </div>
+    </header>
+
+    <!-- Formulaire d'Inscription -->
+    <section class="pt-16 pb-16 bg-gray-100">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-8">Inscrivez-vous pour découvrir nos projets</h2>
+            <div class="max-w-md mx-auto bg-white p-8 rounded-lg shadow-lg">
+                <form id="signup-form">
+                    <input type="text" id="username" class="w-full p-3 mb-4 border border-gray-300 rounded" placeholder="Nom d'utilisateur" required>
+                    <input type="email" id="email" class="w-full p-3 mb-4 border border-gray-300 rounded" placeholder="Adresse e-mail" required>
+                    <input type="password" id="password" class="w-full p-3 mb-4 border border-gray-300 rounded" placeholder="Mot de passe" required>
+                    <input type="password" id="confirm-password" class="w-full p-3 mb-4 border border-gray-300 rounded" placeholder="Confirmer le mot de passe" required>
+                    <button type="submit" class="w-full bg-yellow-400 text-black p-3 rounded hover:bg-yellow-300">S'inscrire</button>
+                </form>
+                <div class="mt-4">
+                    <p>Déjà un compte ? <a href="connexion.html" class="text-yellow-400">Se connecter</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-12 px-4">
+        <div class="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div>
+                <h3 class="text-xl font-bold mb-4">Rustikop</h3>
+                <p>Les perspectives de l'art,</p>
+                <p>réunies.</p>
+            </div>
+            <div>
+                <h4 class="font-bold mb-4">Navigation</h4>
+                <ul class="space-y-2">
+                    <li><a href="index.html" class="hover:text-yellow-400">Accueil</a></li>
+                    <li><a href="portfolio.html" class="hover:text-yellow-400">Portfolio</a></li>
+                    <li><a href="projets.html" class="hover:text-yellow-400">Nos Projets</a></li>
+                    <li><a href="contact.html" class="hover:text-yellow-400">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold mb-4">Suivez-nous</h4>
+                <ul class="space-y-2">
+                    <li><a href="#" class="hover:text-yellow-400">Instagram</a></li>
+                    <li><a href="#" class="hover:text-yellow-400">TikTok</a></li>
+                    <li><a href="#" class="hover:text-yellow-400">YouTube</a></li>
+                    <li><a href="#" class="hover:text-yellow-400">Discord</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold mb-4">Contact</h4>
+                <button class="bg-yellow-400 text-black px-6 py-2 rounded-full font-bold hover:bg-yellow-300">
+                    Contactez-nous
+                </button>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const signupForm = document.getElementById('signup-form');
+            signupForm.addEventListener('submit', function(event) {
+                event.preventDefault();
+
+                const username = document.getElementById('username').value;
+                const email = document.getElementById('email').value;
+                const password = document.getElementById('password').value;
+                const confirmPassword = document.getElementById('confirm-password').value;
+
+                if (password === confirmPassword) {
+                    alert(`Bienvenue, ${username}! Vous êtes inscrit avec succès.`);
+                    // Logique d'inscription (enregistrement des données, redirection, etc.)
+                } else {
+                    alert("Les mots de passe ne correspondent pas.");
+                }
+            });
+        });
+    </script>
+</body>
+</html>
