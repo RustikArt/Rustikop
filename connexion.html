@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rustikop - Inscription</title>
+    <title>Rustikop - Connexion</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
@@ -27,8 +27,7 @@
                     <i class="fas fa-shopping-cart text-xl"></i>
                     <span class="absolute -top-2 -right-2 bg-yellow-400 text-black w-5 h-5 rounded-full text-xs flex items-center justify-center">0</span>
                 </button>
-                <!-- Icône d'inscription avec un espacement -->
-                <a href="inscriptionConnexion.html" class="hover:text-yellow-400 ml-4">
+                <a href="inscription.html" class="hover:text-yellow-400 ml-4">
                     <i class="fas fa-user-circle text-xl"></i> <!-- Icône utilisateur -->
                 </a>
             </div>
@@ -38,25 +37,23 @@
     <!-- Hero Section -->
     <header class="pt-24 pb-16 px-4 bg-gradient-to-r from-purple-900 to-indigo-900 text-white">
         <div class="container mx-auto text-center">
-            <h1 class="text-5xl font-bold mb-4">Inscription chez Rustikop</h1>
-            <p class="text-xl mb-8">Rejoignez notre collectif artistique multidisciplinaire</p>
+            <h1 class="text-5xl font-bold mb-4">Connexion à Rustikop</h1>
+            <p class="text-xl mb-8">Connectez-vous pour accéder à votre compte</p>
         </div>
     </header>
 
-    <!-- Formulaire d'Inscription -->
+    <!-- Formulaire de Connexion -->
     <section class="pt-16 pb-16 bg-gray-100">
         <div class="container mx-auto text-center">
-            <h2 class="text-3xl font-bold mb-8">Inscrivez-vous pour découvrir nos projets</h2>
+            <h2 class="text-3xl font-bold mb-8">Veuillez entrer vos informations</h2>
             <div class="max-w-md mx-auto bg-white p-8 rounded-lg shadow-lg">
-                <form id="signup-form">
-                    <input type="text" id="username" class="w-full p-3 mb-4 border border-gray-300 rounded" placeholder="Nom d'utilisateur" required>
+                <form id="login-form">
                     <input type="email" id="email" class="w-full p-3 mb-4 border border-gray-300 rounded" placeholder="Adresse e-mail" required>
                     <input type="password" id="password" class="w-full p-3 mb-4 border border-gray-300 rounded" placeholder="Mot de passe" required>
-                    <input type="password" id="confirm-password" class="w-full p-3 mb-4 border border-gray-300 rounded" placeholder="Confirmer le mot de passe" required>
-                    <button type="submit" class="w-full bg-yellow-400 text-black p-3 rounded hover:bg-yellow-300">S'inscrire</button>
+                    <button type="submit" class="w-full bg-yellow-400 text-black p-3 rounded hover:bg-yellow-300">Se connecter</button>
                 </form>
                 <div class="mt-4">
-                    <p>Déjà un compte ? <a href="connexion.html" class="text-yellow-400">Se connecter</a></p>
+                    <p>Pas encore de compte ? <a href="inscription.html" class="text-yellow-400">Inscrivez-vous ici</a></p>
                 </div>
             </div>
         </div>
@@ -99,20 +96,22 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            const signupForm = document.getElementById('signup-form');
-            signupForm.addEventListener('submit', function(event) {
+            const loginForm = document.getElementById('login-form');
+            loginForm.addEventListener('submit', function(event) {
                 event.preventDefault();
 
-                const username = document.getElementById('username').value;
                 const email = document.getElementById('email').value;
                 const password = document.getElementById('password').value;
-                const confirmPassword = document.getElementById('confirm-password').value;
 
-                if (password === confirmPassword) {
-                    alert(`Bienvenue, ${username}! Vous êtes inscrit avec succès.`);
-                    // Logique d'inscription (enregistrement des données, redirection, etc.)
+                console.log("Email:", email);  // Debugging
+                console.log("Mot de passe:", password);  // Debugging
+
+                // Vérification fictive de l'email et du mot de passe
+                if (email === "test@exemple.com" && password === "password123") {
+                    alert("Connexion réussie !");
+                    window.location.href = "index.html";  // Rediriger vers la page d'accueil
                 } else {
-                    alert("Les mots de passe ne correspondent pas.");
+                    alert("Email ou mot de passe incorrect.");
                 }
             });
         });
