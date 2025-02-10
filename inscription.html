@@ -98,6 +98,14 @@
     </footer>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
+                        // Gestion du bouton "Contactez-nous" dans le footer
+                        const contactBtn = document.querySelector('footer button');
+            if (contactBtn) {
+                contactBtn.addEventListener('click', function() {
+                    window.location.href = 'contact.html';
+                });
+            }
+
             const signupForm = document.getElementById('signup-form');
             signupForm.addEventListener('submit', function(event) {
                 event.preventDefault();  // Empêche le rechargement de la page lors de l'envoi du formulaire

@@ -214,5 +214,16 @@
             </div>
         </div>
     </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Gestion du bouton "Contactez-nous" dans le footer
+            const contactBtn = document.querySelector('footer button');
+        if (contactBtn) {
+            contactBtn.addEventListener('click', function() {
+                window.location.href = 'contact.html';
+            });
+        }
+    });
+        </script>
 </body>
 </html>
