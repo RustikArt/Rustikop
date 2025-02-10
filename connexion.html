@@ -95,26 +95,27 @@
     </footer>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const loginForm = document.getElementById('login-form');
-            loginForm.addEventListener('submit', function(event) {
-                event.preventDefault();
+document.addEventListener('DOMContentLoaded', function() {
+    const loginForm = document.getElementById('login-form');
+    loginForm.addEventListener('submit', function(event) {
+        event.preventDefault();
 
-                const email = document.getElementById('email').value;
-                const password = document.getElementById('password').value;
+        const email = document.getElementById('login-email').value;
+        const password = document.getElementById('login-password').value;
 
-                console.log("Email:", email);  // Debugging
-                console.log("Mot de passe:", password);  // Debugging
+        const storedEmail = localStorage.getItem('email');
+        const storedPassword = localStorage.getItem('password');
 
-                // Vérification fictive de l'email et du mot de passe
-                if (email === "test@exemple.com" && password === "password123") {
-                    alert("Connexion réussie !");
-                    window.location.href = "index.html";  // Rediriger vers la page d'accueil
-                } else {
-                    alert("Email ou mot de passe incorrect.");
-                }
-            });
-        });
+        if (email === storedEmail && password === storedPassword) {
+            alert("Connexion réussie, bienvenue!");
+            
+            // Rediriger vers la page d'accueil (index.html)
+            window.location.href = "index.html";
+        } else {
+            alert("Adresse e-mail ou mot de passe incorrect.");
+        }
+    });
+});
     </script>
 </body>
 </html>

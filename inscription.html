@@ -96,46 +96,33 @@
             </div>
         </div>
     </footer>
-
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const signupForm = document.getElementById('signup-form');
             signupForm.addEventListener('submit', function(event) {
-                event.preventDefault();
+                event.preventDefault();  // Empêche le rechargement de la page lors de l'envoi du formulaire
 
                 const username = document.getElementById('username').value;
                 const email = document.getElementById('email').value;
                 const password = document.getElementById('password').value;
                 const confirmPassword = document.getElementById('confirm-password').value;
 
+                // Vérifier si les mots de passe correspondent
                 if (password === confirmPassword) {
+                    // Enregistrer les informations dans le localStorage
+                    localStorage.setItem('username', username);
+                    localStorage.setItem('email', email);
+                    localStorage.setItem('password', password);
+
                     alert(`Bienvenue, ${username}! Vous êtes inscrit avec succès.`);
-                    // Logique d'inscription (enregistrement des données, redirection, etc.)
+
+                    // Rediriger vers la page de connexion
+                    window.location.href = "connexion.html";
                 } else {
                     alert("Les mots de passe ne correspondent pas.");
                 }
             });
         });
     </script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const signupForm = document.getElementById('signup-form');
-            signupForm.addEventListener('submit', function(event) {
-                event.preventDefault();  // Empêche le rechargement de la page lors de l'envoi du formulaire
-    
-                const username = document.getElementById('username').value;
-                const email = document.getElementById('email').value;
-                const password = document.getElementById('password').value;
-                const confirmPassword = document.getElementById('confirm-password').value;
-    
-                if (password === confirmPassword) {
-                    alert(`Bienvenue, ${username}! Vous êtes inscrit avec succès.`);
-                    // Logique d'inscription (enregistrement des données, redirection, etc.)
-                } else {
-                    alert("Les mots de passe ne correspondent pas.");
-                }
-            });
-        });
-    </script>    
 </body>
 </html>
