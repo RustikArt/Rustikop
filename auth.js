@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (inscriptionForm) {
         inscriptionForm.addEventListener('submit', async function(e) {
             e.preventDefault();
-            
+             
             const pseudo = document.getElementById('pseudo').value;
             const email = document.getElementById('email').value;
             const password = document.getElementById('password').value;

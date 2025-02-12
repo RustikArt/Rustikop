@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const darkModeToggle = document.getElementById('dark-mode-toggle');
     const languageToggle = document.getElementById('change-language');
 
-    // Fonction pour le mode sombre
+    // Fonction pour le mode sombre 
     function initDarkMode() {
         // Vérifier si le mode sombre était activé
         const isDarkMode = localStorage.getItem('darkMode') === 'true';

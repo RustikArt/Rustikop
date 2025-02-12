@@ -10,7 +10,7 @@ app.use(express.json());
 app.use(cors());
 
 // Connexion MongoDB
-mongoose.connect(process.env.MONGODB_URI || 'mongodb+srv://[votre-nom]:[votre-mdp]@cluster0.mongodb.net/authdb?retryWrites=true&w=majority');
+mongoose.connect(process.env.MONGODB_URI || 'mongodb+srv://RustikPro:J3Su1sRust1k4%40tl%40S@cluster0.mongodb.net/authdb?retryWrites=true&w=majority');
 
 // Modèle utilisateur
 const userSchema = new mongoose.Schema({
@@ -93,10 +93,10 @@ app.put('/api/profile/:id', async (req, res) => {
       { new: true }
     );
     res.json({ user });
-  } catch (error) {just
+  } catch (error) {
     res.status(500).json({ message: 'Erreur serveur' });
   }
 });
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Serveur démarré sur le port ${PORT}`));
