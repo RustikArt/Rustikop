@@ -6,6 +6,25 @@
     <title>Rustikop - Toutes les perspectives de l'art, réunies.</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .dark-mode {
+            background-color: #1a1a1a;
+            color: #ffffff;
+        }
+        
+        .dark-mode .bg-white {
+            background-color: #2d2d2d !important;
+        }
+        
+        .dark-mode .text-gray-700,
+        .dark-mode .text-gray-600 {
+            color: #e0e0e0 !important;
+        }
+        
+        .dark-mode .bg-gray-100 {
+            background-color: #333333 !important;
+        }
+    </style>
 </head>
 <body class="bg-gray-50">
     <!-- Navigation -->
@@ -13,11 +32,11 @@
         <div class="container mx-auto flex justify-between items-center">
             <div class="text-2xl font-bold">Rustikop</div>
             <div class="hidden md:flex space-x-6">
-                <a href="index.html" class="hover:text-yellow-400">Accueil</a>
-                <a href="portfolio.html" class="hover:text-yellow-400">Portfolio</a>
-                <a href="projets.html" class="hover:text-yellow-400">Nos Projets</a>
-                <a href="contact.html" class="hover:text-yellow-400">Contact</a>
-                <a href="magasin.html" class="hover:text-yellow-400">Magasin</a>                
+                <a href="index.html" data-translate="home" class="hover:text-yellow-400">Accueil</a>
+                <a href="portfolio.html" data-translate="portfolio" class="hover:text-yellow-400">Portfolio</a>
+                <a href="projets.html" data-translate="projects" class="hover:text-yellow-400">Nos Projets</a>
+                <a href="contact.html" data-translate="contact" class="hover:text-yellow-400">Contact</a>
+                <a href="magasin.html" data-translate="store" class="hover:text-yellow-400">Magasin</a>                
             </div>
             <div class="flex items-center space-x-4">
                 <button class="hover:text-yellow-400">
@@ -27,14 +46,18 @@
                     <i class="fas fa-shopping-cart text-xl"></i>
                     <span class="absolute -top-2 -right-2 bg-yellow-400 text-black w-5 h-5 rounded-full text-xs flex items-center justify-center">0</span>
                 </button>
-                <!-- Icône d'inscription avec un espacement -->
-                <a href="inscription.html" class="hover:text-yellow-400 ml-4">
-                    <i class="fas fa-user-circle text-xl"></i> <!-- Icône utilisateur -->
-                </a>
+                <div class="relative">
+                    <button id="settings-toggle" class="hover:text-yellow-400">
+                        <i class="fas fa-cog text-xl"></i>
+                    </button>
+                    <div id="settings-menu" class="hidden absolute right-0 mt-2 w-48 bg-white shadow-lg rounded-lg p-2">
+                        <button id="dark-mode-toggle" data-translate="darkMode" class="block w-full text-left px-4 py-2 text-gray-700 hover:bg-gray-200">Mode Sombre</button>
+                        <button id="change-language" data-translate="changeLanguage" class="block w-full text-left px-4 py-2 text-gray-700 hover:bg-gray-200">Changer la Langue</button>
+                    </div>
+                </div>
             </div>
         </div>
     </nav>
-
     <!-- Contenu de la page -->
     <!-- Hero Section -->
     <header class="pt-24 pb-16 px-4 bg-gradient-to-r from-purple-900 to-indigo-900 text-white">
@@ -187,6 +210,57 @@
                     navLinks.classList.toggle('flex-col');
                     navLinks.classList.add('absolute', 'top-16', 'left-0', 'w-full', 'bg-black', 'p-4');
                 });
+            }
+        });
+
+        const userIcon = document.getElementById('user-icon');
+    const userNameDisplay = document.getElementById('user-name');
+    const userMenu = document.getElementById('user-menu');
+
+    const isLoggedIn = localStorage.getItem('isLoggedIn');
+    const username = localStorage.getItem('username');
+
+    if (isLoggedIn === 'true' && username) {
+        userNameDisplay.textContent = username;
+        userIcon.href = "#"; // Désactive le lien vers connexion.html
+    }
+
+    userIcon.addEventListener('click', function(event) {
+        event.preventDefault();
+        userMenu.classList.toggle('hidden');
+    });
+
+    // Déconnexion
+    document.getElementById('logout').addEventListener('click', function() {
+        localStorage.removeItem('isLoggedIn');
+        window.location.href = "index.html";
+    });
+    </script>
+    
+    <script>
+    document.getElementById('dark-mode-toggle').addEventListener('click', function() {
+        document.body.classList.toggle('bg-black');
+        document.body.classList.toggle('text-white');
+    });
+    
+    document.getElementById('change-language').addEventListener('click', function() {
+        alert("Fonctionnalité à venir !");
+    });
+    </script>
+    <script src="settings.js"></script>
+    <script>
+        // Gestion du menu des paramètres
+        const settingsToggle = document.getElementById('settings-toggle');
+        const settingsMenu = document.getElementById('settings-menu');
+    
+        settingsToggle.addEventListener('click', function(event) {
+            event.stopPropagation();
+            settingsMenu.classList.toggle('hidden');
+        });
+    
+        document.addEventListener('click', function(event) {
+            if (!settingsMenu.contains(event.target) && !settingsToggle.contains(event.target)) {
+                settingsMenu.classList.add('hidden');
             }
         });
     </script>

@@ -8,122 +8,68 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body class="bg-gray-50">
-    <!-- Navigation -->
-    <nav class="bg-black text-white p-4 fixed w-full top-0 z-50">
-        <div class="container mx-auto flex justify-between items-center">
-            <div class="text-2xl font-bold">Rustikop</div>
-            <div class="hidden md:flex space-x-6">
-                <a href="index.html" class="hover:text-yellow-400">Accueil</a>
-                <a href="portfolio.html" class="hover:text-yellow-400">Portfolio</a>
-                <a href="projets.html" class="hover:text-yellow-400">Nos Projets</a>
-                <a href="contact.html" class="hover:text-yellow-400">Contact</a>
-                <a href="magasin.html" class="hover:text-yellow-400">Magasin</a>                
-            </div>
-            <div class="flex items-center space-x-4">
-                <button class="hover:text-yellow-400">
-                    <i class="fas fa-search text-xl"></i>
-                </button>
-                <button class="hover:text-yellow-400 relative">
-                    <i class="fas fa-shopping-cart text-xl"></i>
-                    <span class="absolute -top-2 -right-2 bg-yellow-400 text-black w-5 h-5 rounded-full text-xs flex items-center justify-center">0</span>
-                </button>
-                <a href="inscription.html" class="hover:text-yellow-400 ml-4">
-                    <i class="fas fa-user-circle text-xl"></i> <!-- Icône utilisateur -->
-                </a>
-            </div>
-        </div>
-    </nav>
+    <!-- Navigation (copiez la même navigation que index.html) -->
 
-    <!-- Hero Section -->
-    <header class="pt-24 pb-16 px-4 bg-gradient-to-r from-purple-900 to-indigo-900 text-white">
-        <div class="container mx-auto text-center">
-            <h1 class="text-5xl font-bold mb-4">Connexion à Rustikop</h1>
-            <p class="text-xl mb-8">Connectez-vous pour accéder à votre compte</p>
-        </div>
-    </header>
-
-    <!-- Formulaire de Connexion -->
-    <section class="pt-16 pb-16 bg-gray-100">
-        <div class="container mx-auto text-center">
-            <h2 class="text-3xl font-bold mb-8">Veuillez entrer vos informations</h2>
-            <div class="max-w-md mx-auto bg-white p-8 rounded-lg shadow-lg">
-                <form id="login-form">
-                    <input type="email" id="email" class="w-full p-3 mb-4 border border-gray-300 rounded" placeholder="Adresse e-mail" required>
-                    <input type="password" id="password" class="w-full p-3 mb-4 border border-gray-300 rounded" placeholder="Mot de passe" required>
-                    <button type="submit" class="w-full bg-yellow-400 text-black p-3 rounded hover:bg-yellow-300">Se connecter</button>
-                </form>
-                <div class="mt-4">
-                    <p>Pas encore de compte ? <a href="inscription.html" class="text-yellow-400">Inscrivez-vous ici</a></p>
+    <div class="min-h-screen flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-md w-full space-y-8 bg-white p-8 rounded-lg shadow-lg">
+            <div>
+                <h2 class="mt-6 text-center text-3xl font-extrabold text-gray-900">
+                    Connectez-vous
+                </h2>
+            </div>
+            <form class="mt-8 space-y-6" id="connexion-form">
+                <div class="rounded-md shadow-sm space-y-4">
+                    <div>
+                        <label for="login-email" class="block text-sm font-medium text-gray-700">
+                            Email
+                        </label>
+                        <input id="login-email" name="email" type="email" required 
+                            class="appearance-none rounded-lg relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-yellow-500 focus:border-yellow-500 focus:z-10 sm:text-sm">
+                    </div>
+                    <div>
+                        <label for="login-password" class="block text-sm font-medium text-gray-700">
+                            Mot de passe
+                        </label>
+                        <input id="login-password" name="password" type="password" required 
+                            class="appearance-none rounded-lg relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-yellow-500 focus:border-yellow-500 focus:z-10 sm:text-sm">
+                    </div>
                 </div>
-            </div>
+
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center">
+                        <input id="remember-me" name="remember-me" type="checkbox" 
+                            class="h-4 w-4 text-yellow-600 focus:ring-yellow-500 border-gray-300 rounded">
+                        <label for="remember-me" class="ml-2 block text-sm text-gray-900">
+                            Se souvenir de moi
+                        </label>
+                    </div>
+
+                    <div class="text-sm">
+                        <a href="#" class="font-medium text-yellow-600 hover:text-yellow-500">
+                            Mot de passe oublié?
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <button type="submit" 
+                        class="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-black bg-yellow-400 hover:bg-yellow-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500">
+                        Se connecter
+                    </button>
+                </div>
+                
+                <div class="text-center">
+                    <p class="text-sm text-gray-600">
+                        Pas encore de compte? 
+                        <a href="inscription.html" class="font-medium text-yellow-600 hover:text-yellow-500">
+                            Inscrivez-vous
+                        </a>
+                    </p>
+                </div>
+            </form>
         </div>
-    </section>
+    </div>
 
-    <!-- Footer -->
-    <footer class="bg-black text-white py-12 px-4">
-        <div class="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div>
-                <h3 class="text-xl font-bold mb-4">Rustikop</h3>
-                <p>Les perspectives de l'art,</p>
-                <p>réunies.</p>
-            </div>
-            <div>
-                <h4 class="font-bold mb-4">Navigation</h4>
-                <ul class="space-y-2">
-                    <li><a href="index.html" class="hover:text-yellow-400">Accueil</a></li>
-                    <li><a href="portfolio.html" class="hover:text-yellow-400">Portfolio</a></li>
-                    <li><a href="projets.html" class="hover:text-yellow-400">Nos Projets</a></li>
-                    <li><a href="contact.html" class="hover:text-yellow-400">Contact</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4 class="font-bold mb-4">Suivez-nous</h4>
-                <ul class="space-y-2">
-                    <li><a href="#" class="hover:text-yellow-400">Instagram</a></li>
-                    <li><a href="#" class="hover:text-yellow-400">TikTok</a></li>
-                    <li><a href="#" class="hover:text-yellow-400">YouTube</a></li>
-                    <li><a href="#" class="hover:text-yellow-400">Discord</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4 class="font-bold mb-4">Contact</h4>
-                <button class="bg-yellow-400 text-black px-6 py-2 rounded-full font-bold hover:bg-yellow-300">
-                    Contactez-nous
-                </button>
-            </div>
-        </div>
-    </footer>
-
-    <script>
-document.addEventListener('DOMContentLoaded', function() {
-                // Gestion du bouton "Contactez-nous" dans le footer
-                const contactBtn = document.querySelector('footer button');
-            if (contactBtn) {
-                contactBtn.addEventListener('click', function() {
-                    window.location.href = 'contact.html';
-                });
-            }
-
-    const loginForm = document.getElementById('login-form');
-    loginForm.addEventListener('submit', function(event) {
-        event.preventDefault();
-
-        const email = document.getElementById('login-email').value;
-        const password = document.getElementById('login-password').value;
-
-        const storedEmail = localStorage.getItem('email');
-        const storedPassword = localStorage.getItem('password');
-
-        if (email === storedEmail && password === storedPassword) {
-            alert("Connexion réussie, bienvenue!");
-            
-            // Rediriger vers la page d'accueil (index.html)
-            window.location.href = "index.html";
-        } else {
-            alert("Adresse e-mail ou mot de passe incorrect.");
-        }
-    });
-});
-    </script>
+    <script src="auth.js"></script>
 </body>
 </html>
